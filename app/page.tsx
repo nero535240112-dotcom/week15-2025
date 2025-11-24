@@ -1,6 +1,8 @@
 import prisma from '@/lib/prisma'
 import { addSong } from './actions'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   // Mengambil data dari tabel TetoSong
   const songs = await prisma.tetoSong.findMany()
